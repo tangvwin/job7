@@ -1,0 +1,39 @@
+
+<div class="pull-right">
+  <%= link_to("Add a new job", new_job_path, :class => "btn btn-primary")%>
+</div>
+
+
+
+<table class="table table-inverse">
+<thead>
+    <tr>
+    <td>jobs</td>
+    <td>编辑|删除</td>
+    <td>生成时间</td>
+    <tr>
+
+</thead>
+
+<tbody>
+
+
+  <% @jobs.each do |job| %>
+  <tr>
+     <td>
+       <%= link_to(job.title, job_path(job))%>
+     </td>
+
+     <td>
+     <%= link_to("edit", edit_job_path(job) ) %>|
+     <%= link_to("Delete", job_path(job), :method => :delete, :data => {:confirm => "您确定删除吗?"} )%>
+   </td>
+
+
+     <td>
+       <%= job.created_at %>
+     </td>
+   </tr>
+   <%end%>
+</tbody>
+ </table>
