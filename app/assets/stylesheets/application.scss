@@ -18,3 +18,68 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-nav {
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+
+.navbar-inverse {
+  margin-bottom: 0;
+}
+
+
+.navbar-brand {
+height: 35px;
+padding-top: 25px;
+}
+.navbar {
+min-height: 40px;
+}
+
+ .navbar-brand > img {
+     display: inline-block; //图片和链接文字显示在同一行
+     margin-right: 10px; //图片和链接文字拉开一点距离
+     width: 64px; //定制图片宽度
+     height: 32px; //定制图片高度
+ }
+
+
+.navbar-toggle {
+margin-top: 4px;
+margin-bottom: 4px;
+}
+
+.jumbotron {
+  background-image:url('http://fullstack-public.oss-cn-qingdao.aliyuncs.com/2017-04-15-542213.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+}
+
+.title {
+  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 80px;
+}
+
+.slogan {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+  top: 12px;
+}
+
+.lead {
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+}

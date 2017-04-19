@@ -5,6 +5,7 @@ before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destro
 
    def index
      @jobs = Job.all
+     @jobs = Job.paginate(:page => params[:page], :per_page => 10)
    end
 
    def new

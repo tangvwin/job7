@@ -1,13 +1,32 @@
-<nav class="navbar navbar-default" role="navigation">
-   <div class="container-fluid">
-     <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+   <div class="navbar-header">
+     <a class="navbar-brand" href="/"><img src='<%= image_url 'https://ww1.sinaimg.cn/large/006tKfTcgy1fersn3981sj307x04k3yj.jpg' %>' >猎鹰招聘</a>
+   </div>
+   <ul class="nav navbar-nav">
+     <li class="active"><a href="/jobs">Home</a></li>
+     <li class="dropdown">
+       <a class="dropdown-toggle" data-toggle="dropdown" href="#">职位分类
+       <span class="caret"></span></a>
+       <ul class="dropdown-menu">
+         <li><a href="#">互联网</a></li>
+         <li><a href="#">金融</a></li>
+         <li><a href="#">传媒</a></li>
+         <li><a href="#">房地产</a></li>
+         <li><a href="#">教育</a></li>
+       </ul>
+     </li>
 
-     <div class="navbar-header">
-       <a class="navbar-brand" href="/">Jdstore</a>
-     </div>
+   </ul>
 
 
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+
+
+
+
        <ul class="nav navbar-nav navbar-right">
 
          <% if !current_user %>

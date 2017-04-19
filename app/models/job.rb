@@ -5,6 +5,7 @@ class Job < ApplicationRecord
    validates :wage_lower_bound, presence: true
    validates :wage_lower_bound, numericality: { greater_than: 0}
 
+   mount_uploader :picture, PictureUploader
 
   def publish!
     self.is_hidden = false

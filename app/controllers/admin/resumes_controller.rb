@@ -6,9 +6,6 @@ class Admin::ResumesController < ApplicationController
 
   def index
     @job = Job.find(params[:job_id])
-    @resume = @job.resumes.order('created_at DESC')
-
-   end
-
-
+    @resumes = @job.resumes.order('created_at DESC')
+  end
 end
