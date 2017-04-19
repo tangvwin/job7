@@ -22,8 +22,9 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <td>
-                职缺</td>
+
+
+            <td>职缺</td>
             <td>薪资下限</td>
             <td>薪资上限</td>
             <td>刊登时间</td>
@@ -33,6 +34,7 @@
     <tbody>
         <% @jobs.each do |job| %>
         <tr>
+
             <td>
                 <%= link_to(job.title, job_path(job)) %>
             </td>
@@ -50,8 +52,6 @@
     </tbody>
 
 </table>
-
-
-<div class="text-center">
-    <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+   <div class="text-center">
+      <%= will_paginate @jobs %>
     </div>
