@@ -2,13 +2,7 @@
 
 <h3><%= simple_format(@job.description) %></h3>
 
-<%= image_tag @job.picture.url if @job.picture? %>
 
-<%= form_for @job, html: {multipart: true} do |f| %>
-
-  <%= f.file_field :picture %>
-  <%= f.submit "Submit" %>
-<% end %>
 
 
 <div class="text-center">
