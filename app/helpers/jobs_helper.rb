@@ -2,9 +2,9 @@ module JobsHelper
 
   def render_job_status(job)
     if job.is_hidden
-      content_tag(:span, "", :class => "fa fa-lock")
+      content_tag(:span, "", :class => "fa fa-2x fa-fw fa-eye-slash")
     else
-      content_tag(:span, "", :class => "fa fa-globe")
+      content_tag(:span, "", :class => "-alt fa fa-2x fa-eye fa-fw")
     end
   end
 

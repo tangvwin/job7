@@ -72,7 +72,7 @@ end
 
 private
      def job_params
-       params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :picture)
+       params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :picture, :company, :job_style, :location)
      end
 
      def picture_size
