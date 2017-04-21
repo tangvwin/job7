@@ -17,8 +17,12 @@
               <div class="col-md-2">
                 <!-- sidebar head-->
                 <div class="profile-userpic">
-					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
-				</div>
+                  <% if current_user%>
+                  <img src= "<%= render_user_avatar(current_user, 20) %>"class="img-responsive" alt="">
+                   <% else %>
+          <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                     <% end %>
+        </div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
@@ -34,11 +38,11 @@
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
+				<!-- SIDEBAR BUTTONS
 				<div class="profile-userbuttons">
 					<button type="button" class="btn btn-success btn-sm">Follow</button>
 					<button type="button" class="btn btn-danger btn-sm">Message</button>
-				</div>
+				</div>      -->
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">

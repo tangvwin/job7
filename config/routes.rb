@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-
+  namespace :account do
+    resource :users
+  end
 
 
 end
