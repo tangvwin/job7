@@ -21,15 +21,22 @@
                薪资上限
            </td>
            <td>
+               所属公司
+           </td>
+           <td>
+               工作地点
+           </td>
+           <td>
                管理选项
            </td>
            <td>
-               刊登时间
+               发布时间
            </td>
        </tr>
    </thead>
 
    <% @jobs.each do |job| %>
+   <tbody>
    <tr>
 
        <td>
@@ -40,6 +47,16 @@
        <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
        <td> <%= job.wage_lower_bound %> </td>
        <td> <%= job.wage_upper_bound %> </td>
+
+       <td>
+           <%= job.company %>
+       </td>
+
+       <td>
+            <%= job.location %>
+       </td>
+
+
        <td >
            <%= link_to("编辑", edit_admin_job_path(job), :class => "btn btn-xs btn-primary") %>
 
@@ -60,49 +77,9 @@
        </td>
    </tr>
    <% end %>
+ </tbody>
 </table>
 
    <div class="text-center">
        <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
        </div>
-
-
-
-
-
-
-       <div class="section">
-                   <div class="container">
-                       <div class="row">
-                           <div class="col-md-12">
-                               <table class="table table-hover table-striped">
-
-                                       <tr>
-                                           <td>
-                                               <a href="#"><i class="-alt fa fa-2x fa-eye fa-fw"></i></a>
-                                           </td>
-                                           <td>
-                                               <h4>
-                                                   <b>Asistente de sistemas</b>
-                                               </h4>
-                                               <p>@ramonvillaw</p>
-                                           </td>
-                                           <td>
-                                               <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle" width="60">
-                                           </td>
-                                           <td>
-                                               <h4>
-                                                   <b>Ramón Villa Awad</b>
-                                               </h4>
-                                               <a href="mailto:ramonvillaw@gmail.com">ramonvillaw@gmail.com</a>
-                                           </td>
-                                           <td>2 años</td>
-                                           <td>
-                                               <div class="btn-group">
-                                                  <button class="btn btn-default" value="left" type="button" >
-                                                       <i class="fa fa-fw s fa-remove"></i>Eliminar</button>
-                                                   <button class="btn btn-default" value="right" type="button">
-                                                       <i class="fa fa-fw fa-cog"></i>Configurar</button>
-                                               </div>
-                                           </td>
-                                       </tr>

@@ -6,9 +6,20 @@
 
 
 
-
 <div class="text-center">
   <%= link_to("投交简历", new_job_resume_path(@job), :style => "font-size: 30px; ",:class => "btn btn-primary")%>
 </br>
   <%= link_to '<span>back</span>'.html_safe, jobs_path %>
 </div>
+
+
+
+<%= image_tag @job.picture.url if @job.picture? %>
+
+
+<%= form_for @job, html: {multipart: true} do |f| %>
+   ...
+
+  <%= f.file_field :picture %>
+<%= f.submit "Submit" %>
+<% end %>
